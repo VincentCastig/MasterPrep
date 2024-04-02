@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Text Reader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Sales Engineer Interview Questions</h1>
+<button onclick="readRandomText()">Click Me</button>
+
+<script>
+    function readRandomText() {
+        // Array of texts to be read
+        var texts = [
+            "Why do you want to work as an Solutions Engineer?",
+            "What makes you think you would make a great Solutions Engineer?",
+            "What motivates you?",
+            "What did you learn from networking?",
+            "How did you gain a customer's loyalty",
+            "How have you handled rejection in the past?",
+            "Have you ever made a hard ethical decision?",
+            "Tell me about yourself?",
+            "What are your weaknesses?",
+            "What are your strengths?",
+            "What is your preferred salary?",
+            "Where else are you interviewing?",
+            "Why do you want to work at this company?"
+            // Add more texts as needed
+        ];
+
+        // Get a random index from the array
+        var randomIndex = Math.floor(Math.random() * texts.length);
+
+        // Get the selected text
+        var selectedText = texts[randomIndex];
+
+        // Create a new SpeechSynthesisUtterance
+        var utterance = new SpeechSynthesisUtterance(selectedText);
+
+        // Use the default speech synthesis voice
+        utterance.voice = speechSynthesis.getVoices()[0];
+
+        // Speak the selected text
+        speechSynthesis.speak(utterance);
+    }
+</script>
+
+<script>
+    // Initial array of texts
+    var originalTexts = [
+            "How would you handle a technical objection from a potential customer?",
+            "How do you approach qualifying leads and understanding customer needs?",
+            "Describe a successful deal you worked on. What role did you play in securing the sale?",
+            "How do you communicate technical information to non-technical customers?",
+            "Give an example of a challenging customer interaction and how you resolved it.",
+            "What strategies do you use to build and maintain customer relationships?",
+            "How do you collaborate with sales and development teams to ensure customer success?",
+            "Can you provide an example of a successful collaboration between sales and engineering?",
+            "How do you handle feedback or feature requests from customers and communicate them to the development team?",
+            "How do you stay updated on industry trends and changes in our product?",
+            "If a customer asks a technical question beyond your knowledge, how do you handle it?",
+            "Can you outline your approach to delivering an effective sales demo?",
+            "How do you tailor a demo to address the specific needs of a customer?",
+            "Describe a situation where you had to quickly adapt to changes or challenges in a sales environment.",
+            "How do you handle competing priorities and manage your time effectively?"
+            // Add more texts as needed
+        ];
+
+    // Create a copy of the original array to avoid modifying it directly
+    var texts = originalTexts.slice();
+
+    function readRandomText() {
+        if (texts.length === 0) {
+            alert("All texts have been read. Refresh the page to start again.");
+            return;
+        }
+
+        // Get a random index from the array
+        var randomIndex = Math.floor(Math.random() * texts.length);
+
+        // Get the selected text
+        var selectedText = texts[randomIndex];
+
+        // Remove the selected text from the array
+        texts.splice(randomIndex, 1);
+
+        // Create a new SpeechSynthesisUtterance
+        var utterance = new SpeechSynthesisUtterance(selectedText);
+
+        // Use the default speech synthesis voice
+        utterance.voice = speechSynthesis.getVoices()[0];
+
+        // Speak the selected text
+        speechSynthesis.speak(utterance);
+    }
+</script>
+
+</body>
+</html>
