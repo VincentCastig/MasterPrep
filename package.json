@@ -1,0 +1,35 @@
+{
+  "name": "prepmaster",
+  "version": "1.0.0",
+  "description": "MasterPrep is your comprehensive solution for mastering job interviews and landing your dream career. Whether you're a seasoned professional or just starting your job search journey, MasterPrep provides you with the tools, resources, and guidance you need to succeed in today's competitive job market.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentCastig/PrepMaster.git"
+  },
+  "keywords": [
+    "interview",
+    "job",
+    "preparation",
+    "career",
+    "success"
+  ],
+  "author": "Vincent Castigliola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VincentCastig/PrepMaster/issues"
+  },
+  "homepage": "https://github.com/VincentCastig/PrepMaster#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
