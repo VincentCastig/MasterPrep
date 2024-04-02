@@ -3,6 +3,7 @@
 // Import necessary modules
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path'); // Import the path module
 
 // Create an instance of Express application
 const app = express();
@@ -12,7 +13,11 @@ app.use(bodyParser.json());
 
 // Define routes
 app.get('/', (req, res) => {
-  res.send('Welcome to MasterPrep - Your Ultimate Interview Preparation App!');
+ // Absolute path to your HTML file
+ const htmlFilePath = path.join(__dirname, 'views', 'hiring-manager.html');
+  
+ // Send the HTML file as a response
+ res.sendFile(htmlFilePath);
 });
 
 // Define a route to handle mock interview requests
