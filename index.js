@@ -9,7 +9,7 @@ const path = require('path'); // Import the path module
 const app = express();
 
 // Middleware to parse JSON requests
-app.use(bodyParser.json());
+app.use(express.static('views'));
 
 // Define routes
 app.get('/', (req, res) => {
